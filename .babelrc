@@ -1,0 +1,13 @@
+{
+  "presets": ["@babel/env", "@babel/react"],
+  "plugins": [
+    [
+      "babel-plugin-styled-components",
+      {
+        "pure": true
+      }
+    ],
+    "@babel/proposal-class-properties",
+		"@babel/proposal-object-rest-spread"
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "name": "@flatlinediver/react-spinner-demo",
+  "version": "1.0.0",
+  "description": "Demo for @flatlinediver/react-spinner",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --mode development",
+    "build": "webpack --mode production"
+  },
+  "author": "https://github.com/flatlinediver",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/flatlinediver/react-spinner-demo",
+    "bugs": "https://github.com/flatlinediver/react-spinner/issues"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.0",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-proposal-object-rest-spread": "^7.5.5",
+    "@babel/preset-env": "^7.6.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-styled-components": "^1.10.0",
+    "clean-webpack-plugin": "^0.1.19",
+    "dotenv": "^6.2.0",
+    "eslint": "^6.3.0",
+    "file-loader": "^2.0.0",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.1.0",
+    "webpack": "^4.39.3",
+    "webpack-cli": "^3.3.8",
+    "webpack-dev-server": "^3.8.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  },
+  "dependencies": {
+    "@flatlinediver/react-spinner": "^1.0.2",
+    "styled-components": "^5.0.1"
+  }
+}
