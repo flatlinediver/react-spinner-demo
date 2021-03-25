@@ -36,6 +36,6 @@
     "styled-components": "^5.0.1"
   },
   "dependencies": {
-    "@flatlinediver/react-spinner": "^1.2.0"
+    "@flatlinediver/react-spinner": "^1.2.1"
   }
 }
