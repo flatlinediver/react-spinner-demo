@@ -4,7 +4,7 @@ import GithubIcon from './githubIcon';
 import { Wrapper, Title, Icons } from './style'
 
 
-export default ({}) => (
+export default () => (
     <Wrapper>
         <Title>@flatlinediver/<span>react-spinner</span></Title>
         <Icons>

@@ -8,6 +8,9 @@ module.exports = {
     extensions: ['.js', '.jsx'],
     alias: {
       utils: path.resolve(__dirname, 'src/js', 'utils'),
+      react: path.resolve('./node_modules/react'),
+      "react-dom": path.resolve('./node_modules/react-dom'),
+      "styled-components": path.resolve('./node_modules/styled-components'),
     }
   },
   entry: './src/js/index.js',

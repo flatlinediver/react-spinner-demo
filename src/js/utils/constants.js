@@ -5,7 +5,7 @@ export const dropdownItems = [
     'edges'
 ];
 
-export const spinnerConfig = {
+export const spinnerOptions = {
     position: [
         {
             label: 'static',

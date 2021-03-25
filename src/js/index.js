@@ -1,11 +1,6 @@
 import React from "react"
 import { render } from 'react-dom'
-import ConfigContextProvider from './utils/configContext'
+import {StoreProvider} from './store'
 import App from './app'
 
-render(
-	<ConfigContextProvider>
-		<App />
-	</ConfigContextProvider>,
-	document.getElementById('app')
-)
+render(<StoreProvider><App /></StoreProvider>, document.getElementById('app'))
