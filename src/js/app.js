@@ -10,7 +10,7 @@ export default () => {
     const {store} = useStore();
 	return (
 		<ThemeProvider theme={styleTheme}>
-			<SpinnerProvider value={store}>
+			<SpinnerProvider {...store}>
 				<Wrapper>
 					<Sidebar />
 					<Main />
