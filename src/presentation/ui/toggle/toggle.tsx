@@ -9,7 +9,7 @@ interface Toogle {
 const Toggle: FC<Toogle> = ({ bool = false, handleClick }) => (
   <Wrapper>
     <span>Thick</span>
-    <Button name="spinner thickness toggle" onClick={handleClick}>
+    <Button aria-label="spinner thickness toggle" onClick={handleClick}>
       <Circle bool={bool} />
     </Button>
   </Wrapper>

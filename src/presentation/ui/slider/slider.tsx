@@ -10,8 +10,8 @@ interface Slider {
 
 const Slider: FC<Slider> = (props) => (
   <Wrapper>
-    <span>Size</span>
-    <Input type="range" {...props} />
+    <label id="range-label">Size</label>
+    <Input aria-labelledby="range-label" type="range" {...props} />
   </Wrapper>
 );
 

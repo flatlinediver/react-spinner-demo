@@ -2,7 +2,11 @@ import React, { FC } from 'react';
 import { Link } from './style';
 
 const GithubIcon: FC = () => (
-  <Link href="https://github.com/flatlinediver/react-spinner">
+  <Link
+    title="Link to module github"
+    aria-label="Link to module github"
+    href="https://github.com/flatlinediver/react-spinner"
+  >
     <svg height="20" viewBox="0 0 32.58 31.77">
       <path
         fillRule="evenodd"

@@ -16,7 +16,7 @@ const Dropdown: FC<Dropdown> = ({ children, opened, setOpened, label }) => {
   }, [opened, contentRef.current]);
   return (
     <Wrapper>
-      <Button name={`${label} option`} opened={opened} onClick={setOpened}>
+      <Button aria-label={`${label} option`} opened={opened} onClick={setOpened}>
         {label}
         <Chevron opened={opened} />
       </Button>

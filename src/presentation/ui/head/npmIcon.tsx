@@ -2,7 +2,11 @@ import React, { FC } from 'react';
 import { Link } from './style';
 
 const NpmIcon: FC = () => (
-  <Link href="https://www.npmjs.com/package/@flatlinediver/react-spinner">
+  <Link
+    title="Link to module NPM page"
+    aria-label="Link to module NPM page"
+    href="https://www.npmjs.com/package/@flatlinediver/react-spinner"
+  >
     <svg height="16" viewBox="0 0 780 250">
       <path
         d="M240,250h100v-50h100V0H240V250z

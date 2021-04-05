@@ -19,7 +19,7 @@ const Item: FC<Item> = ({ onClick, active, label, isColor }) => {
   const renderLabel = isColor ? formatColors(label) : formattedLabel(label as string);
 
   return (
-    <Wrapper name="dropdown option" onClick={onClick}>
+    <Wrapper aria-label="dropdown option" onClick={onClick}>
       <Check active={active} />
       {renderLabel}
     </Wrapper>
