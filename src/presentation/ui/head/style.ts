@@ -12,13 +12,13 @@ export const Wrapper = styled.div`
 export const Title = styled.h1`
   font-size: 1em;
   text-align: left;
-  font-weight: normal;
+  font-weight: 400;
   fill: ${({ theme }) => theme.palette.lightBlue};
   color: ${({ theme }) => theme.palette.lightBlue};
 
   span {
     display: inline;
-    font-weight: bold;
+    font-weight: 700;
   }
 `;
 export const Icons = styled.div`

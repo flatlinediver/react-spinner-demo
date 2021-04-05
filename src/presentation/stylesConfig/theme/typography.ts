@@ -1,6 +1,6 @@
 import withUnit from './withUnit';
 
-const fontFamily = "'Poppins', 'Helvetica', 'Arial', sans-serif";
+const fontFamily = "'Poppins', sans-serif";
 const fontWeightLight = 300;
 const fontWeightRegular = 400;
 const fontWeightMedium = 500;

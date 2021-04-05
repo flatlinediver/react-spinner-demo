@@ -6,7 +6,6 @@ import breakpoints from './breakpoints';
 import typography from './typography';
 import shadows from './shadows';
 import shapes from './shapes';
-import zIndex from './zIndex';
 
 export const theme = {
   palette,
@@ -15,7 +14,6 @@ export const theme = {
   typography,
   shadows,
   shapes,
-  zIndex,
 };
 
 export const useTheme = () => useContext(ThemeContext);
