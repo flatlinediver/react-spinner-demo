@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.section`
   width: 100vw;
   height: 100vh;
   background: ${({ theme }) => theme.palette.lightBlue};

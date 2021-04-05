@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
-export const Wrapper = styled.div`
-  min-width: 300px;
+export const Wrapper = styled.aside`
+  width: 100%;
+  max-width: 360px;
   min-height: 100vh;
   background: ${({ theme }) => theme.palette.darkBlue};
   display: flex;

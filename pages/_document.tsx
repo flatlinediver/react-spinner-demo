@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import React from 'react';
 import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
@@ -10,6 +9,7 @@ export default class MyDocument extends Document {
     try {
       ctx.renderPage = () =>
         originalRenderPage({
+          /* eslint-disable @typescript-eslint/no-explicit-any */
           enhanceApp: (App: any) => (props: any) => sheet.collectStyles(<App {...props} />),
         });
 
@@ -30,7 +30,7 @@ export default class MyDocument extends Document {
 
   render() {
     return (
-      <Html lang="es">
+      <Html lang="en">
         <Head>
           <meta name="charset" content="UTF-8" />
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
