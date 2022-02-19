@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "@flatlinediver/react-spinner": "^2.0.9",
-    "next": "^10.0.3",
+    "next": "^12.1.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-spring": "^8.0.27",
