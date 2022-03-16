@@ -3,18 +3,7 @@
     "baseUrl": "./",
     "target": "es5",
     "paths": {
-      "@utils": [
-        "src/utils"
-      ],
-      "@ui": [
-        "src/presentation/ui"
-      ],
-      "@stylesConfig": [
-        "src/presentation/stylesConfig"
-      ],
-      "@store": [
-        "src/infrastructure/store"
-      ]
+      "@*": ["./src/*"],
     },
     "lib": [
       "dom",
@@ -40,7 +29,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "src/presentation/stylesConfig/theme/styled.d.ts"
+    "src/ui/styles/theme/styled.d.ts"
   ],
   "exclude": [
     "node_modules"

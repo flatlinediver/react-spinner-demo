@@ -1,6 +1,4 @@
 // next.config.js
 module.exports = {
-    images: {
-      domains: ['images.ctfassets.net', 'images.pexels.com'],
-    },
-  }
+  reactStrictMode: true,
+}
