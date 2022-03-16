@@ -17,7 +17,7 @@ const mainElementBase = ({ fontSize }: StyledLinkProps) => css`
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  font-size: ${fontSize ?? `1.3rem`};
+  font-size: ${fontSize ?? `1.5rem`};
   width: max-content;
   padding: 0.2rem;
   cursor: pointer;
