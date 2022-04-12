@@ -29,7 +29,12 @@ export const Header: FC = () => {
   return (
     <StyledHeader>
       <Nav>
-        <Link color={palette.text} asButton label={`Home`} href="https://www.flatlinediver.com">
+        <Link
+          color={palette.text}
+          asButton
+          label={`Home`}
+          href="https://www.flatlinediver.com"
+        >
           <IconLogo />
         </Link>
       </Nav>

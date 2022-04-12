@@ -114,18 +114,25 @@ const buttonStates = css`
   }
 `;
 
-export const linkStyles = ({ color, asButton }: StyledLinkProps) => css`
+export const linkStyles = ({
+  color,
+  asButton,
+}: StyledLinkProps) => css`
   ${mainElementBase};
   ${asButton ? `padding: .2rem` : `margin: 0 .2rem`};
-  ${asButton ? buttonHoverElement({ color }) : linkHoverElement({ color })};
-  ${({ theme }) => focusElement({ color: color ?? theme.palette.link })};
+  ${asButton
+    ? buttonHoverElement({ color })
+    : linkHoverElement({ color })};
+  ${({ theme }) =>
+    focusElement({ color: color ?? theme.palette.link })};
   ${asButton ? buttonStates : linkStates};
   color: ${({ theme }) => color ?? theme.palette.link};
 `;
 export const buttonStyles = ({ color }: StyledButtonProps) => css`
   ${mainElementBase};
   ${buttonHoverElement({ color })};
-  ${({ theme }) => focusElement({ color: color ?? theme.palette.text })};
+  ${({ theme }) =>
+    focusElement({ color: color ?? theme.palette.text })};
   ${buttonStates};
   color: ${({ theme }) => color ?? theme.palette.text};
   padding: 0.2rem;

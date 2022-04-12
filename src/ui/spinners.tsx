@@ -15,7 +15,8 @@ export const Spinners: FC = () => {
           marginBottom: `2rem`,
         }}
       >
-        Trigger the theme toggle button on the up-right corner to see the spinner colors change
+        Trigger the theme toggle button on the up-right corner to see
+        the spinner colors change
       </p>
       <div
         style={{
