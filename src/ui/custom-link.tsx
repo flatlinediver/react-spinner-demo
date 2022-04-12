@@ -4,11 +4,10 @@ import NextLink, { LinkProps as NextLinkProps } from 'next/link';
 import { StyledLinkProps, linkStyles } from '@styles/common-styles';
 
 const StyledLink = styled.a<StyledLinkProps>`
-  ${({ color, asButton, fontSize }) => linkStyles({ color, asButton, fontSize })};
+  ${({ color, asButton }) => linkStyles({ color, asButton })};
 `;
 
-interface LinkProps extends NextLinkProps, StyledLinkProps {
-  href: string;
+export interface LinkProps extends NextLinkProps, StyledLinkProps {
   label: string;
   external?: boolean;
 }
@@ -19,7 +18,7 @@ export const Link: FC<LinkProps> = ({
   children,
   asButton,
   color,
-  fontSize,
+  href,
   ...rest
 }) => {
   const additionalProps = external
@@ -31,14 +30,8 @@ export const Link: FC<LinkProps> = ({
     : { 'aria-label': `${label}` };
 
   return (
-    <NextLink {...rest}>
-      <StyledLink
-        href={rest.href}
-        {...additionalProps}
-        asButton={asButton}
-        color={color}
-        fontSize={fontSize}
-      >
+    <NextLink {...rest} href={href}>
+      <StyledLink href={`${href}`} {...additionalProps} asButton={asButton} color={color}>
         {children}
       </StyledLink>
     </NextLink>

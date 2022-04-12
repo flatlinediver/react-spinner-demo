@@ -1,6 +1,12 @@
 /* eslint-disable react/display-name */
 import React from 'react';
-import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document';
+import Document, {
+  Html,
+  Head,
+  Main,
+  NextScript,
+  DocumentContext,
+} from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
 import { Favicon } from '@utils/favicon';
 
@@ -13,7 +19,8 @@ export default class MyDocument extends Document {
       ctx.renderPage = () =>
         originalRenderPage({
           /* eslint-disable @typescript-eslint/no-explicit-any */
-          enhanceApp: (App: any) => (props: any) => sheet.collectStyles(<App {...props} />),
+          enhanceApp: (App: any) => (props: any) =>
+            sheet.collectStyles(<App {...props} />),
         });
 
       const initialProps = await Document.getInitialProps(ctx);
@@ -35,7 +42,10 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <meta property="og:site_name" content={process.env.NEXT_PUBLIC_SITE_NAME} />
+          <meta
+            property="og:site_name"
+            content={process.env.NEXT_PUBLIC_SITE_NAME}
+          />
           <meta name="charset" content="UTF-8" />
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
           <link

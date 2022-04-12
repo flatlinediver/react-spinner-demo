@@ -8,13 +8,15 @@ const StyledFooter = styled.footer`
   max-width: 330px;
   margin: 0 0 1.3rem;
   font-style: italic;
+  a {
+    font-size: 0.8rem;
+  }
 `;
 
 export const Footer: FC = () => (
   <StyledFooter>
     Check it out on
     <Link
-      fontSize={`.8rem`}
       label="@flatlinediver/react-spinner"
       external
       href={`https://www.npmjs.com/package/@flatlinediver/react-spinner`}

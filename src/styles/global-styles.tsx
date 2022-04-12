@@ -21,12 +21,11 @@ const GlobalStyle = createGlobalStyle`
     flex-direction: column;
     min-height: 100vh;
   }
-  h1, h2, p, ul, a, button, main, footer {
-    position: relative;
-  }
+
   h1 {
     width: 100%;
     font-size: 1.6rem;
+    margin-bottom: 0;
   }
   h2 {
     font-size: 1.6rem;

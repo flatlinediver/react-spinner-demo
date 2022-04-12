@@ -9,10 +9,12 @@ export interface IThemeMode {
 
 const [ThemeMode, Provider] = createSafeContext<IThemeMode>();
 
-export const ThemeModeProvider: FC<{ render: (mode: IThemeMode['mode']) => React.ReactNode }> = ({
-  render,
-}) => {
-  const [mode, setMode] = useState<IThemeMode['mode']>(detectUserColorScheme());
+export const ThemeModeProvider: FC<{
+  render: (mode: IThemeMode['mode']) => React.ReactNode;
+}> = ({ render }) => {
+  const [mode, setMode] = useState<IThemeMode['mode']>(
+    detectUserColorScheme()
+  );
   const THEME_KEY = `theme-mode`;
   const toggleMode = (newMode?: IThemeMode['mode']) => {
     newMode = newMode ?? mode === `light` ? `dark` : `light`;

@@ -2,12 +2,11 @@ import { css } from 'styled-components';
 
 export interface StyledButtonProps {
   color?: string;
-  fontSize?: string;
 }
 export interface StyledLinkProps extends StyledButtonProps {
   asButton?: boolean;
 }
-const mainElementBase = ({ fontSize }: StyledLinkProps) => css`
+const mainElementBase = css`
   border: none;
   outline: none;
   position: relative;
@@ -17,9 +16,8 @@ const mainElementBase = ({ fontSize }: StyledLinkProps) => css`
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  font-size: ${fontSize ?? `1.5rem`};
+  font-size: 1.5rem;
   width: max-content;
-  padding: 0.2rem;
   cursor: pointer;
 `;
 const actionElementBase = css`
@@ -36,10 +34,10 @@ const actionElementBase = css`
 const linkHoverElement = ({ color }: StyledLinkProps) => css`
   &:before {
     ${actionElementBase};
-    top: 100%;
-    left: 0.3rem;
-    width: calc(100% - 0.6rem);
-    height: 2px;
+    top: calc(100% - 2px);
+    left: 0;
+    width: 100%;
+    height: 1px;
     background: ${({ theme }) => color ?? theme.palette.link};
   }
 `;
@@ -94,13 +92,13 @@ const linkStates = css`
 const buttonStates = css`
   &:hover {
     &:before {
-      opacity: 0.2;
+      opacity: 0.1;
     }
   }
   &:focus {
     border: none;
     &:before {
-      opacity: 0.2;
+      opacity: 0.1;
     }
     &:after {
       opacity: 1;
@@ -110,20 +108,25 @@ const buttonStates = css`
     &:after {
       opacity: 0;
     }
+    &:before {
+      opacity: 0;
+    }
   }
 `;
 
-export const linkStyles = ({ color, asButton, fontSize }: StyledLinkProps) => css`
-  ${mainElementBase({ fontSize })};
+export const linkStyles = ({ color, asButton }: StyledLinkProps) => css`
+  ${mainElementBase};
+  ${asButton ? `padding: .2rem` : `margin: 0 .2rem`};
   ${asButton ? buttonHoverElement({ color }) : linkHoverElement({ color })};
   ${({ theme }) => focusElement({ color: color ?? theme.palette.link })};
   ${asButton ? buttonStates : linkStates};
   color: ${({ theme }) => color ?? theme.palette.link};
 `;
-export const buttonStyles = ({ color, fontSize }: StyledButtonProps) => css`
-  ${mainElementBase({ fontSize })};
+export const buttonStyles = ({ color }: StyledButtonProps) => css`
+  ${mainElementBase};
   ${buttonHoverElement({ color })};
   ${({ theme }) => focusElement({ color: color ?? theme.palette.text })};
   ${buttonStates};
   color: ${({ theme }) => color ?? theme.palette.text};
+  padding: 0.2rem;
 `;

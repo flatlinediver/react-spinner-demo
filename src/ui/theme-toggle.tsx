@@ -1,5 +1,9 @@
 import React, { FC, useEffect } from 'react';
-import { motion, useAnimation, useReducedMotion } from 'framer-motion';
+import {
+  motion,
+  useAnimation,
+  useReducedMotion,
+} from 'framer-motion';
 import { useThemeMode } from '@context/theme-mode';
 import { RiSunFill, RiMoonFill } from 'react-icons/ri';
 import styled from 'styled-components';
@@ -16,7 +20,8 @@ export const ThemeToggle: FC = () => {
   const shouldReduceMotion = useReducedMotion();
   const controls = useAnimation();
   const initial = { rotate: 0 };
-  const ifShould = (obj = {}) => (shouldReduceMotion ? { type: false } : obj);
+  const ifShould = (obj = {}) =>
+    shouldReduceMotion ? { type: false } : obj;
 
   useEffect(() => {
     controls.start({
@@ -34,7 +39,9 @@ export const ThemeToggle: FC = () => {
       aria-checked={mode === 'dark'}
       name="Dark mode"
     >
-      <b className="visually-hidden">{mode === `light` ? `dark mode` : `Light mode`}</b>
+      <b className="visually-hidden">
+        {mode === `light` ? `dark mode` : `Light mode`}
+      </b>
       <Span initial={initial} animate={controls}>
         {mode === `light` ? <RiSunFill /> : <RiMoonFill />}
       </Span>
